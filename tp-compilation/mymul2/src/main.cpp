@@ -4,7 +4,7 @@
 
 class MyWindow : public Gtk::Window {
   public:
-    MyWindow(Gtk::Application & app) {
+    explicit MyWindow(Gtk::Application & app) {
       set_title("Mul2");
       set_default_size(200, 100);
 

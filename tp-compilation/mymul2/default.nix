@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs>{} }:
 
 pkgs.stdenv.mkDerivation {
-  name = "mul2";
+  name = "mymul2";
   src = ./.;
 
   buildInputs = with pkgs; [
