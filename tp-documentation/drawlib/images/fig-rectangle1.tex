@@ -1,0 +1,31 @@
+
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage[frenchb]{babel}
+\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{calc}
+\makeatletter
+\makeatother
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tikzpicture}[thick]
+
+  \draw[-] (0,0) -- (4,0) -- (4,-2) -- (0,-2) -- (0,0) node[] {};
+
+  \draw[fill=black] (0,0) circle (0.08) node[left] {\large $(x_0,y_0)$};
+  \draw[fill=black] (4,-2) circle (0.08) node[right] {\large $(x_1,y_1)$};
+
+\end{tikzpicture}
+
+\end{document}
+
+

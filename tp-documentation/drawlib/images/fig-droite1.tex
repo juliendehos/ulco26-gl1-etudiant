@@ -1,0 +1,37 @@
+
+% xelatex --shell-escape --output-directory tmp -jobname myfile1 fig-droite.tex
+% pdfcrop --margin 5 tmp/myfile1.pdf tmp/myfile2.pdf
+% pdf2svg tmp/myfile2.pdf fig-droite.svg
+
+% https://tikz.dev/
+% https://tikz.org/examples/chapter-02-creating-the-first-tikz-images/
+
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage[frenchb]{babel}
+\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{calc}
+\makeatletter
+\makeatother
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tikzpicture}[thick]
+
+  \draw[-] (0,0) -- (9,3) node[] {};
+
+  \draw[fill=black] (0,0) circle (0.08) node[below left] {\large $(x_0,y_0)$};
+  \draw[fill=black] (9,3) circle (0.08) node[below right] {\large $(x_1,y_1)$};
+
+\end{tikzpicture}
+
+\end{document}
+

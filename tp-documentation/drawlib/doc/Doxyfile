@@ -1,0 +1,13 @@
+PROJECT_NAME           = "drawlib"
+OUTPUT_DIRECTORY       = .
+INPUT                  = ../include
+EXTRACT_ALL            = YES
+RECURSIVE              = YES
+OUTPUT_LANGUAGE        = French
+GENERATE_BUGLIST       = YES
+GENERATE_TODOLIST      = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+FULL_PATH_NAMES        = NO
+IMAGE_PATH             = ../images
+
