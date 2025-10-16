@@ -1,4 +1,6 @@
 out.pnm
-doc/html
+doxygen/html
 manual/book
+dot/*.svg
+tikz/*.svg
 
