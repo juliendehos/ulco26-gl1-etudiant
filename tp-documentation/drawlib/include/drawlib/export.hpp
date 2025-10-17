@@ -5,6 +5,7 @@
 #include <string>
 
 // Exporte une Image dans un fichier.
+// TODO Implémenter l'export dans d'autres formats (PNG...).
 namespace Export {
 
   // Exporte une Image vers un fichier PNM.

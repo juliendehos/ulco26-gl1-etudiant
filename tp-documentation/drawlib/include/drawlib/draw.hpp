@@ -3,6 +3,7 @@
 #include "image.hpp"
 
 // Module de dessin dans une Image.
+// TODO Implémentez le dessin de textes.
 namespace Draw {
 
   // Dessine une ligne.
