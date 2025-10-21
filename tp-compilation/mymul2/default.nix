@@ -5,7 +5,7 @@ pkgs.stdenv.mkDerivation {
   src = ./.;
 
   buildInputs = with pkgs; [
-    catch2
+    catch2_3
     cmake
     gtkmm4
     pkg-config

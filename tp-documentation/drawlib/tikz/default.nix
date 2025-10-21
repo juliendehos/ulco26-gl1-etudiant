@@ -1,6 +1,10 @@
+
 { pkgs ? import <nixpkgs> {} }:
 
-pkgs.mkShell {
+pkgs.stdenv.mkDerivation {
+  name = "drawlib-tikz";
+  src = ./.;
+
   buildInputs = with pkgs; [
     gnumake
     pdf2svg
@@ -13,7 +17,12 @@ pkgs.mkShell {
       wasysym
       scheme-small;
     })
-
   ];
+
+  installPhase = ''
+    mkdir -p $out/images
+    cp *.svg $out/images/
+  '';
+
 }
 

@@ -11,7 +11,6 @@ int main() {
 
   Draw::line(img, 150, 150, 150, 280, 0);
   Draw::line(img, 100, 200, 200, 200, 0);
-
   Draw::line(img, 150, 280, 100, 350, 0);
   Draw::line(img, 150, 280, 200, 350, 0);
 
