@@ -22,6 +22,38 @@ bool operator==(Token const & t1, Token const & t2) {
 }
 
 ////////////////////////////////////////////////////////////////////////
+// mysqrt
+////////////////////////////////////////////////////////////////////////
+
+TEST_CASE( "cas nominaux", "[mysqrt]" ) {
+  // TODO mysqrt(16)
+  // TODO mysqrt(2)
+  // TODO mysqrt(0)
+}
+
+TEST_CASE( "cas d'erreur, avec try/catch", "[mysqrt]" ) {
+  // TODO mysqrt(-1)
+}
+
+TEST_CASE( "cas d'erreur, avec REQUIRE_THROWS_WITH", "[mysqrt]" ) {
+  // TODO mysqrt(-1)
+}
+
+////////////////////////////////////////////////////////////////////////
+// mydiv
+////////////////////////////////////////////////////////////////////////
+
+TEST_CASE( "cas nominaux", "[mydiv]" ) {
+  // TODO mydiv(6, 3)
+  // TODO mydiv(0, 3)
+}
+
+TEST_CASE( "cas d'erreur", "[mydiv]" ) {
+  // TODO mydiv(1, 0)
+  // TODO mydiv(0, 0)
+}
+
+////////////////////////////////////////////////////////////////////////
 // tokenize
 ////////////////////////////////////////////////////////////////////////
 
@@ -37,24 +69,17 @@ TEST_CASE( "tokens", "[tokenize]" ) {
   // TODO tokenize("-1")
   // TODO tokenize("-42")
   // TODO tokenize("-4.2")
-}
 
-TEST_CASE( "token exception 1", "[tokenize]" ) {
-  // TODO vérifier que tokenize("foobar") lève une exception
-  // MycalcError::Parse, en utilisant un try/catch
-  
-}
-
-TEST_CASE( "token exception 2", "[tokenize]" ) {
-  // TODO vérifier que tokenize("foobar") lève une exception
-  // MycalcError::Parse, en utilisant un REQUIRE_THROWS_WITH
+  const double sqrt2 = std::sqrt(2);
+  const std::string sqrt2_str = std::to_string(sqrt2);
+  const Token sqrt2_token {TokenType::Number, sqrt2};
+  // TODO vérifier tokenize(sqrt2_str) avec sqrt2_token
 }
 
 TEST_CASE( "invalid tokens", "[tokenize]" ) {
+  // TODO tokenize("foobar")
   // TODO tokenize("4foo")
-
   // TODO tokenize("4.2.0")
-
 }
 
 TEST_CASE( "+ 1 2", "[tokenize]" ) {

@@ -7,8 +7,8 @@ Mycalc est une petite calculatrice en [notation
 préfixée](https://fr.wikipedia.org/wiki/Notations_infix%C3%A9e,_pr%C3%A9fix%C3%A9e,_polonaise_et_postfix%C3%A9e).
 
 ```
-> + 1 2
-3
+> + 1 2.3
+3.3
 > + * 3 2 1
 7
 > sqrt 2
@@ -47,6 +47,8 @@ préfixée](https://fr.wikipedia.org/wiki/Notations_infix%C3%A9e,_pr%C3%A9fix%C3
 
     ```
     > sqrt -2
+    domain error
+    > / 1 0
     domain error
     ```
 

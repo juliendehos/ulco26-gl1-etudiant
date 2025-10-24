@@ -7,6 +7,22 @@
 #include <cmath>
 #include <stack>
 
+double mysqrt(double n) {
+  const double y = std::sqrt(n);
+  if (std::isnan(y)) {
+    throw MycalcError::Domain;
+  }
+  return y;
+}
+
+double mydiv(double a, double b) {
+  const double y = a/b;
+  if (std::isnan(y) or std::isinf(y)) {
+    throw MycalcError::Domain;
+  }
+  return a / b;
+}
+
 double eval(const std::list<Token> & tokens) {
 
   std::stack<double> s;
@@ -63,11 +79,7 @@ double eval(const std::list<Token> & tokens) {
           s.pop();
           const double b = s.top();
           s.pop();
-          const double y = a/b;
-          if (std::isnan(y) or std::isinf(y)) {
-            throw MycalcError::Domain;
-          }
-          s.push(y);
+          s.push(mydiv(a, b));
         }
         break;
 
@@ -78,11 +90,7 @@ double eval(const std::list<Token> & tokens) {
         else {
           const double n = s.top();
           s.pop();
-          const double y = std::sqrt(n);
-          if (std::isnan(y)) {
-            throw MycalcError::Domain;
-          }
-          s.push(y);
+          s.push(mysqrt(n));
         }
         break;
 
