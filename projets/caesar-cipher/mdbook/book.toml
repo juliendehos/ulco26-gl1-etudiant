@@ -1,0 +1,9 @@
+[book]
+authors = ["ulco"]
+language = "fr"
+src = "src"
+title = "code-cesar"
+
+[preprocessor.katex]
+after = ["links"]
+
