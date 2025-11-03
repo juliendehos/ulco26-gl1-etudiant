@@ -1,0 +1,14 @@
+PROJECT_NAME          = "rle"
+OUTPUT_DIRECTORY      = .
+INPUT                 = ../src
+EXTRACT_ALL           = YES
+RECURSIVE             = YES
+OUTPUT_LANGUAGE       = French
+GENERATE_BUGLIST      = YES
+GENERATE_TODOLIST     = YES
+GENERATE_HTML         = YES
+GENERATE_LATEX        = NO
+FULL_PATH_NAMES       = NO
+INPUT_FILTER          = "sed -e 's/ TODO/ \\todo/'"
+# IMAGE_PATH            = ../images
+
