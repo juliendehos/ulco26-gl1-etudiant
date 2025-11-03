@@ -17,7 +17,7 @@ command:
 ## Code
 
 ```text
-$ cat input_initial.txt 
+$ cat data/input_initial.txt 
 Il y employait, pour les choses tout à fait secrètes, une espèce de chiffre qui
 en rendait le sens inintelligible (les lettres étant disposées de manière à ne
 pouvoir jamais former un mot), et qui consistait, je le dis pour ceux qui
@@ -25,27 +25,27 @@ voudront les déchiffrer, à changer le rang des lettres dans l'alphabet, en
 écrivant la quatrième pour la première, c'est-à-dire le d pour le a, et ainsi
 de suite.
 
-$ ./build/caesar-cipher.out encode 4 input_initial.txt 
+$ ./build/caesar-cipher.out encode 4 data/input_initial.txt 
 mpciqtpscemxtsyvpiwglswiwxsyxejemxwigvixiwyriiwtigihiglmjjviuymirvirhemxpiwirwmrmrxippmkmfpipiwpixxviwixerxhmwtswiiwhiqermivieritsyzsmvneqemwjsvqivyrqsxixuymgsrwmwxemxnipihmwtsyvgiybuymzsyhvsrxpiwhiglmjjviveglerkivpiverkhiwpixxviwherwpeptlefixirigvmzerxpeuyexvmiqitsyvpetviqmivigiwxehmvipihtsyvpieixemrwmhiwymxi
 ```
 
 ## Decode
 
 ```text
-$ cat input_encrypted.txt 
+$ cat data/input_encrypted.txt 
 mpciqtpscemxtsyvpiwglswiwxsyxejemxwigvixiwyriiwtigihiglmjjviuymirvirhemxpiwirwmrmrxippmkmfpipiwpixxviwixerxhmwtswiiwhiqermivieritsyzsmvneqemwjsvqivyrqsxixuymgsrwmwxemxnipihmwtsyvgiybuymzsyhvsrxpiwhiglmjjviveglerkivpiverkhiwpixxviwherwpeptlefixirigvmzerxpeuyexvmiqitsyvpetviqmivigiwxehmvipihtsyvpieixemrwmhiwymxi
 
-$ ./build/caesar-cipher.out decode 4 input_encrypted.txt 
+$ ./build/caesar-cipher.out decode 4 data/input_encrypted.txt 
 ilyemployaitpourleschosestoutafaitsecretesuneespecedechiffrequienrendaitlesensinintelligibleleslettresetantdisposeesdemaniereanepouvoirjamaisformerunmotetquiconsistaitjeledispourceuxquivoudrontlesdechiffrerachangerlerangdeslettresdanslalphabetenecrivantlaquatriemepourlapremierecestadireledpourleaetainsidesuite
 ```
 
 ## Crack
 
 ```text
-$ cat input_encrypted.txt 
+$ cat data/input_encrypted.txt 
 mpciqtpscemxtsyvpiwglswiwxsyxejemxwigvixiwyriiwtigihiglmjjviuymirvirhemxpiwirwmrmrxippmkmfpipiwpixxviwixerxhmwtswiiwhiqermivieritsyzsmvneqemwjsvqivyrqsxixuymgsrwmwxemxnipihmwtsyvgiybuymzsyhvsrxpiwhiglmjjviveglerkivpiverkhiwpixxviwherwpeptlefixirigvmzerxpeuyexvmiqitsyvpetviqmivigiwxehmvipihtsyvpieixemrwmhiwymxi
 
-$ ./build/caesar-cipher.out crack input_encrypted.txt 
+$ ./build/caesar-cipher.out crack data/input_encrypted.txt 
 key = 4
 ilyemployaitpourleschosestoutafaitsecretesuneespecedechiffrequienrendaitlesensinintelligibleleslettresetantdisposeesdemaniereanepouvoirjamaisformerunmotetquiconsistaitjeledispourceuxquivoudrontlesdechiffrerachangerlerangdeslettresdanslalphabetenecrivantlaquatriemepourlapremierecestadireledpourleaetainsidesuite
 ```
