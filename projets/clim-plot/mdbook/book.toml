@@ -1,0 +1,5 @@
+[book]
+authors = ["ULCO"]
+language = "fr"
+src = "src"
+title = "clim-plot"
