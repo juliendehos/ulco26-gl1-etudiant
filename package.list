@@ -1,9 +1,9 @@
+build-essential
 cargo
 cmake
 doxygen
 eog
 evince
-g++
 gdb
 git
 gnuplot
@@ -12,7 +12,6 @@ libarmadillo-dev
 libcatch2-dev
 libgtkmm-4.0-dev
 libplog-dev
-make
 pdf2svg
 pkg-config
 tree
