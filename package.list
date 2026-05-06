@@ -1,5 +1,4 @@
 build-essential
-cargo
 cmake
 doxygen
 eog
@@ -14,6 +13,7 @@ libgtkmm-4.0-dev
 libplog-dev
 pdf2svg
 pkg-config
+rustup
 tree
 wget
 texlive-extra-utils
