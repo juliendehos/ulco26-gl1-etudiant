@@ -1,11 +1,13 @@
 build-essential
 cmake
+curl
 doxygen
 eog
 evince
 gdb
 git
 gnuplot
+graphviz
 imagemagick
 libarmadillo-dev
 libcatch2-dev
@@ -15,7 +17,7 @@ pdf2svg
 pkg-config
 rustup
 tree
-wget
 texlive-extra-utils
 texlive-lang-french
 texlive-xetex
+wget
