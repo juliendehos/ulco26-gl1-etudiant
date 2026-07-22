@@ -1,6 +1,10 @@
 { pkgs ? import <nixpkgs>{} }:
 
-pkgs.stdenv.mkDerivation {
+let
+  url-compat = "https://github.com/NixOS/nixpkgs/archive/refs/tags/25.11.tar.gz";
+  pkgs-compat = import (fetchTarball  url-compat) {};
+
+in pkgs.stdenv.mkDerivation {
   name = "rle";
   src = ./.;
 
@@ -8,8 +12,8 @@ pkgs.stdenv.mkDerivation {
     catch2_3
     cmake
     doxygen
-    mdbook
-    mdbook-katex
+    pkgs-compat.mdbook
+    pkgs-compat.mdbook-katex
     plog
   ];
 
