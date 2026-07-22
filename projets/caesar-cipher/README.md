@@ -3,6 +3,9 @@
 `caesar-cipher` est un petit programme pour coder, décoder ou cracker des fichiers
 textes en français, en utilisant le chiffrement de César.
 
+`caesar-cipher` ne considère que les lettres en minuscule; les autres
+caractères sont oubliés.
+
 ## Usage
 
 ```text
@@ -17,12 +20,12 @@ command:
 ## Code
 
 ```text
-$ cat data/input_initial.txt 
-Il y employait, pour les choses tout à fait secrètes, une espèce de chiffre qui
-en rendait le sens inintelligible (les lettres étant disposées de manière à ne
+$ cat input_initial.txt 
+il y employait, pour les choses tout a fait secretes, une espece de chiffre qui
+en rendait le sens inintelligible (les lettres etant disposees de maniere a ne
 pouvoir jamais former un mot), et qui consistait, je le dis pour ceux qui
-voudront les déchiffrer, à changer le rang des lettres dans l'alphabet, en
-écrivant la quatrième pour la première, c'est-à-dire le d pour le a, et ainsi
+voudront les dechiffrer, a changer le rang des lettres dans l'alphabet, en
+ecrivant la quatrieme pour la premiere, c'est-a-dire le d pour le a, et ainsi
 de suite.
 
 $ ./build/caesar-cipher.out encode 4 data/input_initial.txt 
@@ -52,7 +55,6 @@ ilyemployaitpourleschosestoutafaitsecretesuneespecedechiffrequienrendaitlesensin
 
 ## Planning
 
-- [ ] implémenter le module `preprocess` + Tests Unitaires + Doxygen
 - [ ] implémenter le module `code` + Tests Unitaires + Doxygen
 - [ ] implémenter `encode/decode` dans le `main`
 - [ ] implémenter le module `crack` + Tests Unitaires + Doxygen

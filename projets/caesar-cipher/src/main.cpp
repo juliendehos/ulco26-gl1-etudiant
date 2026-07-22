@@ -1,14 +1,10 @@
 #include "code.hpp"
 #include "crack.hpp"
-#include "preprocess.hpp"
 
-#include <codecvt>
-#include <cwctype>
 #include <fstream>
-#include <locale>
 #include <iostream>
 
-std::wstring read_file(const std::string & filename) {
+std::string read_file(const std::string & filename) {
   // open file
   std::ifstream ifs(filename);
   if (not ifs.is_open()) {
@@ -19,17 +15,13 @@ std::wstring read_file(const std::string & filename) {
   // read all data
   std::istreambuf_iterator<char> it(ifs.rdbuf());
   std::istreambuf_iterator<char> eos;
-  std::string input8(it, eos);
-
-  // convert to wstring
-  std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> utf8To16;
-  return utf8To16.from_bytes(input8);
+  return std::string(it, eos);
 }
 
 void usage(const char * programName) {
   std::cerr << "Usage: " << programName << " <command> <input_file>" << std::endl;
   std::cerr << "command:" << std::endl;
-  std::cerr << "  - code <key>" << std::endl;
+  std::cerr << "  - encode <key>" << std::endl;
   std::cerr << "  - decode <key>" << std::endl;
   std::cerr << "  - crack" << std::endl;
 }

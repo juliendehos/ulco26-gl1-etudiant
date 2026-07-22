@@ -12,11 +12,11 @@ namespace crack {
 
   // Compte les occurrences de chaque lettre de l'alphabet dans un texte.
   //
-  occur_t compute_occurrences(const std::wstring & text);
+  occur_t compute_occurrences(const std::string & text);
 
   // Calcule la fréquence d'apparition de chaque lettre dans un texte.
   //
-  freq_t compute_frequencies(const std::wstring & text);
+  freq_t compute_frequencies(const std::string & text);
 
   // Calcule le chi-carré pour les fréquences d'un texte données.
   //
@@ -35,7 +35,7 @@ namespace crack {
   //
   // retourne clé de chiffrement la plus probable
   //
-  int crack_caesar_cipher(const std::wstring & encrypted_text);
+  int crack_caesar_cipher(const std::string & encrypted_text);
 
 } // crack
 

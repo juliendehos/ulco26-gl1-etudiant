@@ -1,20 +1,20 @@
 #include "code.hpp"
 
-wchar_t code::shift_char(wchar_t c, int shift) {
+char code::shift_char(char c, int shift) {
 
   // TODO code::shift_char
 
   return {};
 }
 
-std::wstring code::encode_text(const std::wstring &text, int shift) {
+std::string code::encode_text(const std::string &text, int shift) {
 
   // TODO code::encode_text
 
   return {};
 }
 
-std::wstring code::decode_text(const std::wstring & encrypted_text, int shift) {
+std::string code::decode_text(const std::string & encrypted_text, int shift) {
 
   // TODO code::decode_text
 

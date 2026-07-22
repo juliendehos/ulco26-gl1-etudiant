@@ -2,7 +2,7 @@
 authors = ["ulco"]
 language = "fr"
 src = "src"
-title = "code-cesar"
+title = "caesar-cipher"
 
 [preprocessor.katex]
 after = ["links"]

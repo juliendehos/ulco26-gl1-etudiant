@@ -17,7 +17,7 @@ namespace code {
   //
   // retourne le caractère transformé
   //
-  wchar_t shift_char(wchar_t c, int shift);
+  char shift_char(char c, int shift);
 
   // Code un message selon la méthode du chiffrement de César.
   //
@@ -27,7 +27,7 @@ namespace code {
   //
   // retourne le texte chiffré
   //
-  std::wstring encode_text(const std::wstring &text, int shift);
+  std::string encode_text(const std::string &text, int shift);
 
   // Décode un texte selon la méthode du chiffrement de César.
   //
@@ -37,7 +37,7 @@ namespace code {
   //
   // retourne: le texte déchiffré
   //
-  std::wstring decode_text(const std::wstring & encrypted_text, int shift);
+  std::string decode_text(const std::string & encrypted_text, int shift);
 
 } // code
 

@@ -8,29 +8,29 @@
 
 /*
 TEST_CASE ("Shift character within alphabet", "[code]") {
-  wchar_t inputChar = L'a';
+  char inputChar = 'a';
   int shift = 3;
-  wchar_t expectedOutput = L'd';
+  char expectedOutput = 'd';
 
-  wchar_t shiftedChar = code::shift_char(inputChar, shift);
+  char shiftedChar = code::shift_char(inputChar, shift);
   REQUIRE(shiftedChar == expectedOutput);
 }
 
 TEST_CASE ("Shift character with wrap-around", "[code]") {
-  wchar_t inputChar = L'z';
+  char inputChar = 'z';
   int shift = 2;
-  wchar_t expectedOutput = L'b';
+  char expectedOutput = 'b';
 
-  wchar_t shiftedChar = code::shift_char(inputChar, shift);
+  char shiftedChar = code::shift_char(inputChar, shift);
   REQUIRE(shiftedChar == expectedOutput);
 }
 
 TEST_CASE ("Shift non-alphabet character", "[code]") {
-  wchar_t inputChar = L' ';
+  char inputChar = ' ';
   int shift = 5;
-  wchar_t expectedOutput = L' ';
+  char expectedOutput = 0;
 
-  wchar_t shiftedChar = code::shift_char(inputChar, shift);
+  char shiftedChar = code::shift_char(inputChar, shift);
   REQUIRE(shiftedChar == expectedOutput);
 }
 */
@@ -41,47 +41,47 @@ TEST_CASE ("Shift non-alphabet character", "[code]") {
 
 /*
 TEST_CASE ("Encode text with Caesar cipher", "[code]") {
-  std::wstring input = L"hello world";
+  std::string input = "hello world";
   int shift = 3;
-  std::wstring expectedOutput = L"khoor zruog";
+  std::string expectedOutput = "khoorzruog";
 
-  std::wstring encodedText = code::encode_text(input, shift);
+  std::string encodedText = code::encode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 }
 
 TEST_CASE ("Encode text with negative shift", "[code]") {
-  std::wstring input = L"khoor zruog";
+  std::string input = "khoor zruog";
   int shift = -3;
-  std::wstring expectedOutput = L"hello world";
+  std::string expectedOutput = "helloworld";
 
-  std::wstring encodedText = code::encode_text(input, shift);
+  std::string encodedText = code::encode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 }
 
 TEST_CASE ("Encode text with wrap-around", "[code]") {
-  std::wstring input = L"xyz";
+  std::string input = "xyz";
   int shift = 4;
-  std::wstring expectedOutput = L"bcd";
+  std::string expectedOutput = "bcd";
 
-  std::wstring encodedText = code::encode_text(input, shift);
+  std::string encodedText = code::encode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 }
 
 TEST_CASE ("Encode text with non-alphabet characters", "[code]") {
-  std::wstring input = L"hello, world!";
+  std::string input = "hello, world!";
   int shift = 2;
-  std::wstring expectedOutput = L"jgnnq, yqtnf!";
+  std::string expectedOutput = "jgnnqyqtnf";
 
-  std::wstring encodedText = code::encode_text(input, shift);
+  std::string encodedText = code::encode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 }
 
 TEST_CASE ("Encode text with zero shift", "[code]") {
-  std::wstring input = L"sample text";
+  std::string input = "sample text";
   int shift = 0;
-  std::wstring expectedOutput = L"sample text";
+  std::string expectedOutput = "sampletext";
 
-  std::wstring encodedText = code::encode_text(input, shift);
+  std::string encodedText = code::encode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 } 
 */
@@ -92,20 +92,21 @@ TEST_CASE ("Encode text with zero shift", "[code]") {
 
 /*
 TEST_CASE ("Decode text with Caesar cipher", "[code]") {
-  std::wstring input = L"khoor zruog";
+  std::string input = "khoorzruog";
   int shift = 3;
-  std::wstring expectedOutput = L"hello world";
+  std::string expectedOutput = "helloworld";
 
-  std::wstring encodedText = code::decode_text(input, shift);
+  std::string encodedText = code::decode_text(input, shift);
   REQUIRE(encodedText == expectedOutput);
 } 
 
 TEST_CASE("decode_text works correctly", "[code]") {
-  std::wstring original_text = L"exemple de texte a decoder";
+  std::string original_text = "exemple de texte a decoder";
+  std::string final_text = "exempledetexteadecoder";
   int shift = 3;
-  std::wstring encrypted_text = code::encode_text(original_text, shift);
-  std::wstring decrypted_text = code::decode_text(encrypted_text, shift);
-  REQUIRE(decrypted_text == original_text);
+  std::string encrypted_text = code::encode_text(original_text, shift);
+  std::string decrypted_text = code::decode_text(encrypted_text, shift);
+  REQUIRE(decrypted_text == final_text);
 }
 */
 

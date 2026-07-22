@@ -34,14 +34,14 @@ const freq_t french_frequencies = {
 
 const int alphabet_size = french_frequencies.size();
 
-occur_t crack::compute_occurrences(const std::wstring & text) {
+occur_t crack::compute_occurrences(const std::string & text) {
 
   // TODO crack::compute_occurrences
 
   return {};
 }
 
-freq_t crack::compute_frequencies(const std::wstring & text) {
+freq_t crack::compute_frequencies(const std::string & text) {
 
   // TODO crack::compute_frequencies
 
@@ -55,7 +55,7 @@ double crack::compute_chi_squared(const freq_t & observed_frequencies) {
   return {};
 }
 
-int crack::crack_caesar_cipher(const std::wstring & encrypted_text) {
+int crack::crack_caesar_cipher(const std::string & encrypted_text) {
 
   // TODO crack::crack_caesar_cipher
 
