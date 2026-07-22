@@ -48,7 +48,7 @@ int Connect4::countInDirection(const Game &game, Cell player, int i, int j, int 
     int ni = i + di;
     int nj = j + dj;
 
-    while (ni >= 0 && ni < NI && nj >= 0 && nj < NJ && game.board[ij2k(ni, nj)] == player) {
+    while (ni >= 0 and ni < NI and nj >= 0 and nj < NJ and game.board[ij2k(ni, nj)] == player) {
         count++;
         ni += di;
         nj += dj;

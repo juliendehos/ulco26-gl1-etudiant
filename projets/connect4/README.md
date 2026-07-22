@@ -45,9 +45,9 @@ Player 1's turn (X). Enter column (0-6):
 
 - [ ] `getNewI` + tests unitaires 
 - [ ] `playMove` sans détection de victoire + tests unitaires 
+- [ ] `printBoard` + `main`, sans gestion des erreurs de saisie
 - [ ] `checkWin` + tests unitaires 
 - [ ] détection de victoire dans `playMove` + tests unitaires 
-- [ ] `printBoard` + `main`, sans gestion des erreurs de saisie
 - [ ] gestion des erreurs de saisie
 - [ ] documentation doxygen
 
