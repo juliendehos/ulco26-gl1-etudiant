@@ -15,6 +15,7 @@ libgtkmm-4.0-dev
 libplog-dev
 pdf2svg
 pkg-config
+ripgrep
 rustup
 tree
 texlive-extra-utils
