@@ -1,6 +1,6 @@
 out.pnm
 doxygen/html
-manual/book
+mdbook/book
 dot/*.svg
 tikz/*.svg
 
